@@ -23,6 +23,9 @@ importers:
       '@storybook/addon-svelte-csf':
         specifier: ^5.0.0-next.7
         version: 5.0.0-next.7(@storybook/svelte@8.3.6(storybook@8.3.6)(svelte@5.1.0))(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.0)(vite@5.4.10(@types/node@22.7.9)))(@types/node@22.7.9)(storybook@8.3.6)(svelte@5.1.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.7.9))
+      '@storybook/addon-themes':
+        specifier: ^8.3.6
+        version: 8.3.6(storybook@8.3.6)
       '@storybook/blocks':
         specifier: ^8.3.6
         version: 8.3.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)
@@ -862,6 +865,11 @@ packages:
       '@sveltejs/vite-plugin-svelte': ^4.0.0-next.0 || ^4.0.0
       svelte: ^5.0.0-next.267 || ^5.0.0
       vite: ^5.0.0
+
+  '@storybook/addon-themes@8.3.6':
+    resolution: {integrity: sha512-NX6zVWs0JVUg0xICL2v1zlb6eTAQYlE/vd6ATA4bNUNL5sabWGEd1w2ArQaHC9nTnfV60JuRQ8o3SvD7Gg0xMg==}
+    peerDependencies:
+      storybook: ^8.3.6
 
   '@storybook/addon-toolbars@8.3.6':
     resolution: {integrity: sha512-FJH+lRoZXENfpMR/G09ZqB0TmL/k6bv07GN1ysoVs420tKRgjfz6uXaZz5COrhcdISr5mTNmG+mw9x7xXTfX3Q==}
@@ -5387,6 +5395,11 @@ snapshots:
       - terser
       - typescript
 
+  '@storybook/addon-themes@8.3.6(storybook@8.3.6)':
+    dependencies:
+      storybook: 8.3.6
+      ts-dedent: 2.2.0
+
   '@storybook/addon-toolbars@8.3.6(storybook@8.3.6)':
     dependencies:
       storybook: 8.3.6
@@ -5881,7 +5894,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/coverage-v8@2.0.5(vitest@2.0.5)':
+  '@vitest/coverage-v8@2.0.5(vitest@2.0.5(@types/node@22.7.9)(@vitest/ui@2.0.5))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -9144,7 +9157,7 @@ snapshots:
       '@auto-it/npm': 11.2.0(@types/node@22.7.9)(typescript@5.6.3)
       '@auto-it/released': 11.2.0(@types/node@22.7.9)(typescript@5.6.3)
       '@biomejs/biome': 1.8.3
-      '@vitest/coverage-v8': 2.0.5(vitest@2.0.5)
+      '@vitest/coverage-v8': 2.0.5(vitest@2.0.5(@types/node@22.7.9)(@vitest/ui@2.0.5))
       '@vitest/ui': 2.0.5(vitest@2.0.5)
       all-contributors-cli: 6.26.1
       auto: 11.2.0(@types/node@22.7.9)(typescript@5.6.3)
