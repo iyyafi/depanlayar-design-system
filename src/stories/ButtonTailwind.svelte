@@ -15,7 +15,7 @@
 <button
 	type="button"
 	class={[
-		'rounded-full py-2 px-5',
+		'rounded-full py-2 px-5 shadow',
 		...(primary
 			? ['text-white dark:text-zinc-900 bg-sky-600 dark:bg-sky-200']
 			: ['text-white dark:text-zinc-900 bg-orange-600 dark:bg-orange-200'])
