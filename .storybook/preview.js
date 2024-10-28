@@ -1,5 +1,5 @@
 /** @type { import('@storybook/svelte').Preview } */
-import '../src/app.css';
+import '../src/lib/app.css';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 const preview = {
