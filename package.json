@@ -73,7 +73,7 @@
 		"typescript-eslint": "^8.11.0",
 		"vite": "^5.4.10"
 	},
-	"description": "testing svelte lib",
+	"description": "A comprehensive design system to streamline your development process and ensure consistent, beautiful user experiences. This package provides a collection of reusable components, utilities, and design tokens to accelerate your frontend development.",
 	"main": "src/lib/index.ts",
 	"dependencies": {
 		"eslint-compat-utils": "^0.5.1",
