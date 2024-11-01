@@ -3,14 +3,16 @@ import '../src/lib/app.css';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 const preview = {
-	parameters: {
+    parameters: {
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
 				date: /Date$/i
 			}
 		}
-	}
+	},
+
+    tags: ['autodocs']
 };
 
 export const decorators = [
