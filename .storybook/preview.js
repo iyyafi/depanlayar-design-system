@@ -1,9 +1,9 @@
 /** @type { import('@storybook/svelte').Preview } */
-import '../src/lib/app.css';
+import '../src/lib/tailwind.css';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 const preview = {
-    parameters: {
+	parameters: {
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
@@ -12,7 +12,7 @@ const preview = {
 		}
 	},
 
-    tags: ['autodocs']
+	tags: ['autodocs']
 };
 
 export const decorators = [
