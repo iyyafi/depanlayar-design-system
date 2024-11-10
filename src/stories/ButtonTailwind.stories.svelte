@@ -1,5 +1,5 @@
 <script module>
-	import { defineMeta } from '@storybook/addon-svelte-csf';
+	import { defineMeta, setTemplate, type Args } from '@storybook/addon-svelte-csf';
 	import ButtonTailwind from '$lib/button/ButtonTailwind.svelte';
 	import { fn } from '@storybook/test';
 
@@ -9,6 +9,7 @@
 		component: ButtonTailwind,
 		tags: ['autodocs'],
 		argTypes: {
+			children: { control: 'text' },
 			backgroundColor: { control: 'color' },
 			size: {
 				control: { type: 'select' },
@@ -16,16 +17,25 @@
 			}
 		},
 		args: {
+			children: 'Click me',
 			onClick: fn()
 		}
 	});
 </script>
 
+<script lang="ts">
+	setTemplate(template);
+</script>
+
+{#snippet template({ children, ...args }: Args<typeof Story>)}
+	<ButtonTailwind primary={false} size="medium" {...args}>{children}</ButtonTailwind>
+{/snippet}
+
 <!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
-<Story name="Primary" args={{ primary: true, label: 'Button' }} />
+<Story name="Primary" args={{ primary: true, children: 'Button' }} />
 
-<Story name="Secondary" args={{ label: 'Button' }} />
+<Story name="Secondary" args={{ children: 'Button' }} />
 
-<Story name="Large" args={{ size: 'large', label: 'Button' }} />
+<Story name="Large" args={{ size: 'large', children: 'Button' }} />
 
-<Story name="Small" args={{ size: 'small', label: 'Button' }} />
+<Story name="Small" args={{ size: 'small', children: 'Button' }} />

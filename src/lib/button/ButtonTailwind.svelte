@@ -1,15 +1,15 @@
-<script>
-	/**
-	 * @typedef {Object} Props
-	 * @property {boolean} [primary] Is this the principal call to action on the page?
-	 * @property {string} [backgroundColor] What background color to use
-	 * @property {'small' | 'medium' | 'large'} [size] How large should the button be?
-	 * @property {string} label Button contents
-	 * @property {() => void} [onClick] The onclick event handler
-	 */
+<script lang="ts">
+	import type { Snippet } from 'svelte';
 
-	/** @type {Props} */
-	const { primary = false, backgroundColor, size = 'medium', label, onClick } = $props();
+	interface Props {
+		primary: boolean;
+		backgroundColor?: string;
+		size: 'small' | 'medium' | 'large';
+		onClick?: () => void;
+		children: Snippet;
+	}
+
+	const { primary = false, backgroundColor, size = 'medium', children, onClick }: Props = $props();
 </script>
 
 <button
@@ -23,5 +23,5 @@
 	style:background-color={backgroundColor}
 	onclick={onClick}
 >
-	{label}
+	{@render children()}
 </button>

@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	import { defineMeta, setTemplate, type Args } from '@storybook/addon-svelte-csf';
 
-	import Pharagraph from '../lib/typograpy/Paragraph.svelte';
+	import Pharagraph from '$lib/typograpy/Paragraph.svelte';
 
 	const { Story } = defineMeta({
 		title: 'Example/Paragraph',
@@ -24,4 +24,4 @@
 	<Pharagraph {...args}>{children}</Pharagraph>
 {/snippet}
 
-<Story name="Default" args={{ variant: 'filled' }} />
+<Story name="Default" args={{ variant: 'filled', children: 'Halo di sana' }} />
