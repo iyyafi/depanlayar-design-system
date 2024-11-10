@@ -17,7 +17,8 @@
 		"chromatic": "pnpm dlx chromatic --project-token",
 		"doctor": "pnpm dlx storybook doctor",
 		"tailwind": "npx tailwindcss -i ./src/app.css -o ./src/lib/tailwind.css --watch",
-		"ds": "concurrently \"npx tailwindcss -i ./src/app.css -o ./src/lib/tailwind.css --watch\" \"storybook dev -p 6006\""
+		"ds": "concurrently \"npx tailwindcss -i ./src/app.css -o ./src/lib/tailwind.css --watch\" \"storybook dev -p 6006\"",
+		"publish": "pnpm package && pnpm version patch && pnpm publish --access public"
 	},
 	"files": [
 		"dist",
