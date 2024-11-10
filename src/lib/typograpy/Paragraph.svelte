@@ -1,5 +1,6 @@
-<script>
-	let { children } = $props();
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+	let { children }: { children: Snippet } = $props();
 </script>
 
-<div><p class={['text-2xl text-green-700'].join(' ')}>{children}</p></div>
+<p class="text-2xl text-green-700">{@render children()}</p>

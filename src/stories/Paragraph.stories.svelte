@@ -10,4 +10,4 @@
 </script>
 
 <!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
-<Story name="Default" args={{ children: 'ASDASDasd' }} />
+<Story name="Default">ASDASDasd</Story>
