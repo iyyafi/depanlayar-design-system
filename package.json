@@ -18,7 +18,7 @@
 		"doctor": "pnpm dlx storybook doctor",
 		"tailwind": "npx tailwindcss -i ./src/app.css -o ./src/lib/tailwind.css --watch",
 		"ds": "concurrently \"npx tailwindcss -i ./src/app.css -o ./src/lib/tailwind.css --watch\" \"storybook dev -p 6006\"",
-		"publish": "pnpm package && pnpm version patch && git push && pnpm publish --access public"
+		"publish": "pnpm package && pnpm version patch"
 	},
 	"files": [
 		"dist",
