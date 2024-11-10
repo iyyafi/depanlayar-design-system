@@ -1,13 +1,27 @@
-<script module>
-	import { defineMeta } from '@storybook/addon-svelte-csf';
+<script context="module" lang="ts">
+	import { defineMeta, setTemplate, type Args } from '@storybook/addon-svelte-csf';
+
 	import Pharagraph from '../lib/typograpy/Paragraph.svelte';
 
-	// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 	const { Story } = defineMeta({
 		title: 'Example/Paragraph',
-		component: Pharagraph
+		component: Pharagraph,
+		tags: ['autodocs'],
+		args: {
+			children: 'Click me'
+		},
+		argTypes: {
+			children: { control: 'text' }
+		}
 	});
 </script>
 
-<!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
-<Story name="Default">ASDASDasd</Story>
+<script lang="ts">
+	setTemplate(template);
+</script>
+
+{#snippet template({ children, ...args }: Args<typeof Story>)}
+	<Pharagraph {...args}>{children}</Pharagraph>
+{/snippet}
+
+<Story name="Default" args={{ variant: 'filled' }} />
